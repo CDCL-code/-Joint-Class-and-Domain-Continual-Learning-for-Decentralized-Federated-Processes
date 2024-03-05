@@ -1,0 +1,32 @@
+# launch config
+dataroot: '/cdcl'
+logdir: '/cdcl/global_model/'
+assess_runs: 5
+
+experiment_scenario: 1
+
+# scenario
+scenario: multi_digit
+multi: false
+random: false
+
+model: lenet
+pret: multi_digit
+aux_data: same
+n_domains: 2
+n_nodes: 10
+n_classes_node: 2
+num_classes: 10
+
+datasets: multi_digit, split_rot_mnist
+loss_type: mse
+buffer_size: 5000
+num_iter_per_exp: 1000
+train_epochs: 10
+train_mb_size: 128
+lr: 0.01
+ce_loss: false
+early_stopping: 3
+peval_on_test: true
+
+buffer_iter: 1000
